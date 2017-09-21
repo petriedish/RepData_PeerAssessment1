@@ -25,7 +25,7 @@ activity <- tbl_df(activity)
 
 #2. Histogram of the total number of steps taken each day
 
-```{r histogram}
+```{r Histogram}
 activity_grouped <- group_by(activity, date)
 activity_sum <- summarise(activity_grouped, sum(steps, na.rm = TRUE))
 names(activity_sum) <- c("date", "sum_steps")
@@ -115,7 +115,7 @@ imputed <- round(imputed, digits = 0)
 
 #7. Histogram of the total number of steps taken each day after missing values are imputed
 
-```{r imputed histogram}
+```{r imputed_histogram}
 imputed_sum <- rowSums(imputed)
 hist(imputed_sum, breaks = 25, col = "red", xlab = "Steps", main = "Histogram of Total Steps taken per Day including Imputed Days")
 ```
@@ -123,7 +123,7 @@ hist(imputed_sum, breaks = 25, col = "red", xlab = "Steps", main = "Histogram of
 
 #8. Panel plot comparing the average number of steps taken per 5-minute interval across weekdays and weekends
 
-```{r panel plot}
+```{r panel_plot}
 #Need to extract dates from the original dataset and reapply them to the imputed data
 dates <- as.character(unique(activity$date))
 

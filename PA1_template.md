@@ -48,7 +48,7 @@ names(activity_sum) <- c("date", "sum_steps")
 hist(activity_sum$sum_steps, breaks = 25, col = "red", xlab = "Steps", main = "Histogram of Total Steps taken per Day")
 ```
 
-![](PA1_template_files/figure-html/histogram-1.png)<!-- -->
+![](PA1_template_files/figure-html/Histogram-1.png)<!-- -->
 
 #3. Mean and median number of steps taken each day
 
@@ -172,7 +172,7 @@ imputed_sum <- rowSums(imputed)
 hist(imputed_sum, breaks = 25, col = "red", xlab = "Steps", main = "Histogram of Total Steps taken per Day including Imputed Days")
 ```
 
-![](PA1_template_files/figure-html/imputed histogram-1.png)<!-- -->
+![](PA1_template_files/figure-html/imputed_histogram-1.png)<!-- -->
 
 
 #8. Panel plot comparing the average number of steps taken per 5-minute interval across weekdays and weekends
@@ -217,4 +217,4 @@ u <- xyplot(imputed6$'mean(steps)' ~ imputed6$interval | imputed6$day, type = c(
 print(u)
 ```
 
-![](PA1_template_files/figure-html/panel plot-1.png)<!-- -->
+![](PA1_template_files/figure-html/panel_plot-1.png)<!-- -->
