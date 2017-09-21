@@ -25,7 +25,7 @@ activity <- tbl_df(activity)
 
 #2. Histogram of the total number of steps taken each day
 
-```{r Histogram}
+```{r histogram}
 activity_grouped <- group_by(activity, date)
 activity_sum <- summarise(activity_grouped, sum(steps, na.rm = TRUE))
 names(activity_sum) <- c("date", "sum_steps")

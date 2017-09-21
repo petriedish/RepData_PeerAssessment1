@@ -48,7 +48,7 @@ names(activity_sum) <- c("date", "sum_steps")
 hist(activity_sum$sum_steps, breaks = 25, col = "red", xlab = "Steps", main = "Histogram of Total Steps taken per Day")
 ```
 
-![](PA1_template_files/figure-html/Histogram-1.png)<!-- -->
+![](PA1_template_files/figure-html/histogram-1.png)<!-- -->
 
 #3. Mean and median number of steps taken each day
 
